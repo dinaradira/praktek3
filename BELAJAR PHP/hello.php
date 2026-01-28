@@ -5,8 +5,8 @@
     </head>
     <body>
         <?php
-            echo "saya sedang belajar PHP<br>";
-            echo "<p>Belajar PHP hingga jadi master</p>";
+            echo "Saya sedang belajar PHP<br>";
+            echo "<p>Belajar PHP sampe jadi MASTER PHP</p>";
         ?>
     </body>
 </html>
