@@ -31,4 +31,4 @@ window.location='index.php';
 ";
 
 }
-?>  
+?>
