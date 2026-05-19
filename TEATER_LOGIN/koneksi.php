@@ -8,7 +8,9 @@ $conn = mysqli_connect(
 );
 
 if(!$conn){
-    die("Koneksi gagal");
+    die("Koneksi gagal: " . mysqli_connect_error());
 }
+
+echo "Koneksi berhasil";
 
 ?>
