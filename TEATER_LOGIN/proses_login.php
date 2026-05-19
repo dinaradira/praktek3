@@ -30,5 +30,8 @@ window.location='index.php';
 </script>
 ";
 
+if(!$data){
+    die(mysqli_error($conn));
+}
 }
 ?>
