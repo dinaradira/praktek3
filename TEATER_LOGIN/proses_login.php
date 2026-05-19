@@ -17,21 +17,21 @@ $cek = mysqli_num_rows($data);
 
 if($cek > 0){
 
-$d = mysqli_fetch_array($data);
+    $d = mysqli_fetch_array($data);
 
-$_SESSION['username'] = $d['username'];
-$_SESSION['role'] = $d['role'];
+    $_SESSION['username'] = $d['username'];
+    $_SESSION['role'] = $d['role'];
 
-header("location:dashboard.php");
+    header("location:dashboard.php");
 
 }else{
 
-echo "
-<script>
-alert('LOGIN GAGAL!');
-window.location='index.php';
-</script>
-";
+    echo "
+    <script>
+    alert('LOGIN GAGAL!');
+    window.location='index.php';
+    </script>
+    ";
 
 }
 ?>
