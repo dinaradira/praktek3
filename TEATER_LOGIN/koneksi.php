@@ -2,8 +2,8 @@
 
 $conn = mysqli_connect(
     "localhost",
-    "root",
-    "",
+    "2526_03",
+    "12345678",
     "2526_03db"
 );
 
