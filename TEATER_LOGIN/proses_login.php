@@ -6,12 +6,8 @@ include 'koneksi.php';
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$data = mysqli_query(
-$conn,
-"SELECT * FROM admin
-WHERE username='$username'
-AND password='$password'"
-);
+$query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
+$data = mysqli_query($conn, $query);
 
 $cek = mysqli_num_rows($data);
 
@@ -23,6 +19,7 @@ $_SESSION['username'] = $d['username'];
 $_SESSION['role'] = $d['role'];
 
 header("location:dashboard.php");
+exit();
 
 }else{
 
@@ -34,4 +31,4 @@ window.location='index.php';
 ";
 
 }
-?>
+?>  
