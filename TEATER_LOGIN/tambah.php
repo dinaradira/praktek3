@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 include 'koneksi.php';
 
 if(isset($_POST['submit'])){
@@ -8,16 +11,21 @@ if(isset($_POST['submit'])){
     $jabatan = $_POST['jabatan'];
     $alamat = $_POST['alamat'];
 
-    mysqli_query($conn,
-    "INSERT INTO pengurus_teater VALUES(
-    '',
+    $sql = "INSERT INTO pengurus_teater
+    (nama, jenis_kelamin, jabatan, alamat)
+
+    VALUES(
     '$nama',
     '$jenis_kelamin',
     '$jabatan',
     '$alamat'
-    )");
+    )";
 
-    header("location:dashboard.php");
+    if(mysqli_query($conn, $sql)){
+        header("location:dashboard.php");
+    } else {
+        echo "Error : " . mysqli_error($conn);
+    }
 }
 ?>
 
